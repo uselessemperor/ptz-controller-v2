@@ -1,0 +1,17 @@
+.vs/
+bin/
+obj/
+
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+*.db
+*.db3
+*.sqlite
+*.sqlite3
+
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml

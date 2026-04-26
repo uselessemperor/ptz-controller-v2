@@ -1,0 +1,113 @@
+<Window
+    x:Class="PTZ_Controller_v2.AddCameraWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Add Camera">
+
+    <Grid Background="{StaticResource AppBackgroundBrush}"
+          Padding="32">
+
+        <ScrollViewer>
+            <StackPanel Spacing="20"
+                        Width="460"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+
+                <TextBlock Text="ADD NEW CAMERA"
+                           Style="{StaticResource AppTitleTextStyle}"/>
+
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Camera Name"
+                               Style="{StaticResource DetailLabelStyle}"/>
+                    <TextBox x:Name="CameraNameTextBox"
+                             PlaceholderText="Example: Studio Cam A"/>
+                </StackPanel>
+
+                <StackPanel Spacing="8">
+                    <TextBlock Text="IP Address"
+                               Style="{StaticResource DetailLabelStyle}"/>
+                    <TextBox x:Name="IpAddressTextBox"
+                             PlaceholderText="Example: 192.168.1.101"/>
+                </StackPanel>
+
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Control Protocol"
+                               Style="{StaticResource DetailLabelStyle}"/>
+
+                    <ComboBox x:Name="ProtocolComboBox"
+                              SelectedIndex="0">
+                        <ComboBoxItem Content="VISCA"/>
+                        <ComboBoxItem Content="VISCA-IP"/>
+                        <ComboBoxItem Content="ONVIF"/>
+                        <ComboBoxItem Content="PELCO-D"/>
+                        <ComboBoxItem Content="PELCO-P"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Spacing="8">
+                    <TextBlock Text="User ID"
+                               Style="{StaticResource DetailLabelStyle}"/>
+                    <TextBox x:Name="UserIdTextBox"
+                             PlaceholderText="Example: admin"/>
+                </StackPanel>
+
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Password"
+                               Style="{StaticResource DetailLabelStyle}"/>
+                    <PasswordBox x:Name="PasswordBox"
+                                 PlaceholderText="Camera password"/>
+                </StackPanel>
+
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Video Feedback Protocol"
+                               Style="{StaticResource DetailLabelStyle}"/>
+
+                    <ComboBox x:Name="VideoFeedbackProtocolComboBox"
+                              SelectedIndex="0">
+                        <ComboBoxItem Content="RTSP"/>
+                        <ComboBoxItem Content="HTTP MJPEG"/>
+                        <ComboBoxItem Content="NDI"/>
+                        <ComboBoxItem Content="SRT"/>
+                        <ComboBoxItem Content="None"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Preview Stream URL"
+               Style="{StaticResource DetailLabelStyle}"/>
+                    <TextBox x:Name="PreviewStreamUrlTextBox"
+             PlaceholderText="Example: rtsp://admin:password@192.168.1.101:554/main"/>
+                </StackPanel>
+
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Tracking Stream URL"
+               Style="{StaticResource DetailLabelStyle}"/>
+                    <TextBox x:Name="TrackingStreamUrlTextBox"
+             PlaceholderText="Example: rtsp://admin:password@192.168.1.101:554/sub"/>
+                </StackPanel>
+
+                <TextBlock x:Name="ErrorTextBlock"
+                           Foreground="{StaticResource DangerBrush}"
+                           FontSize="14"
+                           Visibility="Collapsed"/>
+
+                <Grid ColumnSpacing="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Content="SAVE CAMERA"
+                            Style="{StaticResource PrimaryButtonStyle}"
+                            Click="SaveCamera_Click"/>
+
+                    <Button Grid.Column="1"
+                            Content="CANCEL"
+                            Style="{StaticResource DarkButtonStyle}"
+                            Click="Cancel_Click"/>
+                </Grid>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

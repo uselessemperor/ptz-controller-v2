@@ -1,0 +1,335 @@
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- ========================================================= -->
+    <!-- Colors -->
+    <!-- ========================================================= -->
+
+    <Color x:Key="AppBackgroundColor">#0F1217</Color>
+    <Color x:Key="CardBackgroundColor">#171B23</Color>
+    <Color x:Key="BorderColor">#2B3240</Color>
+    <Color x:Key="PrimaryColor">#12D9F5</Color>
+    <Color x:Key="DangerColor">#EF2933</Color>
+    <Color x:Key="MutedTextColor">#8497C2</Color>
+    <Color x:Key="WhiteTextColor">White</Color>
+    <Color x:Key="BlackTextColor">Black</Color>
+
+    <Color x:Key="HeaderBorderColor">#252B36</Color>
+    <Color x:Key="DarkButtonBackgroundColor">#141820</Color>
+    <Color x:Key="DarkButtonBorderColor">#202633</Color>
+    <Color x:Key="OfflineDotColor">#71819C</Color>
+    <Color x:Key="OfflineBadgeColor">#252B36</Color>
+
+    <!-- ========================================================= -->
+    <!-- Brushes -->
+    <!-- ========================================================= -->
+
+    <SolidColorBrush x:Key="AppBackgroundBrush" Color="{StaticResource AppBackgroundColor}"/>
+    <SolidColorBrush x:Key="CardBackgroundBrush" Color="{StaticResource CardBackgroundColor}"/>
+    <SolidColorBrush x:Key="BorderBrushColor" Color="{StaticResource BorderColor}"/>
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}"/>
+    <SolidColorBrush x:Key="DangerBrush" Color="{StaticResource DangerColor}"/>
+    <SolidColorBrush x:Key="MutedTextBrush" Color="{StaticResource MutedTextColor}"/>
+    <SolidColorBrush x:Key="WhiteTextBrush" Color="{StaticResource WhiteTextColor}"/>
+    <SolidColorBrush x:Key="BlackTextBrush" Color="{StaticResource BlackTextColor}"/>
+
+    <SolidColorBrush x:Key="HeaderBorderBrush" Color="{StaticResource HeaderBorderColor}"/>
+    <SolidColorBrush x:Key="DarkButtonBackgroundBrush" Color="{StaticResource DarkButtonBackgroundColor}"/>
+    <SolidColorBrush x:Key="DarkButtonBorderBrush" Color="{StaticResource DarkButtonBorderColor}"/>
+    <SolidColorBrush x:Key="OfflineDotBrush" Color="{StaticResource OfflineDotColor}"/>
+    <SolidColorBrush x:Key="OfflineBadgeBrush" Color="{StaticResource OfflineBadgeColor}"/>
+
+    <!-- ========================================================= -->
+    <!-- TabView Dark Theme Overrides -->
+    <!-- ========================================================= -->
+
+    <SolidColorBrush x:Key="TabViewItemHeaderBackground"
+                     Color="{StaticResource AppBackgroundColor}"/>
+
+    <SolidColorBrush x:Key="TabViewItemHeaderBackgroundPointerOver"
+                     Color="{StaticResource CardBackgroundColor}"/>
+
+    <SolidColorBrush x:Key="TabViewItemHeaderBackgroundPressed"
+                     Color="{StaticResource CardBackgroundColor}"/>
+
+    <SolidColorBrush x:Key="TabViewItemHeaderBackgroundSelected"
+                     Color="{StaticResource CardBackgroundColor}"/>
+
+    <SolidColorBrush x:Key="TabViewItemHeaderBackgroundSelectedPointerOver"
+                     Color="{StaticResource CardBackgroundColor}"/>
+
+    <SolidColorBrush x:Key="TabViewItemHeaderBackgroundSelectedPressed"
+                     Color="{StaticResource CardBackgroundColor}"/>
+
+    <SolidColorBrush x:Key="TabViewItemHeaderForeground"
+                     Color="{StaticResource MutedTextColor}"/>
+
+    <SolidColorBrush x:Key="TabViewItemHeaderForegroundPointerOver"
+                     Color="{StaticResource WhiteTextColor}"/>
+
+    <SolidColorBrush x:Key="TabViewItemHeaderForegroundPressed"
+                     Color="{StaticResource WhiteTextColor}"/>
+
+    <SolidColorBrush x:Key="TabViewItemHeaderForegroundSelected"
+                     Color="{StaticResource PrimaryColor}"/>
+
+    <SolidColorBrush x:Key="TabViewItemHeaderForegroundSelectedPointerOver"
+                     Color="{StaticResource PrimaryColor}"/>
+
+    <SolidColorBrush x:Key="TabViewItemHeaderForegroundSelectedPressed"
+                     Color="{StaticResource PrimaryColor}"/>
+
+    <SolidColorBrush x:Key="TabViewBackground"
+                     Color="{StaticResource AppBackgroundColor}"/>
+
+    <SolidColorBrush x:Key="TabViewBorderBrush"
+                     Color="{StaticResource BorderColor}"/>
+
+    <!-- ========================================================= -->
+    <!-- Layout / Spacing Resources -->
+    <!-- ========================================================= -->
+
+    <Thickness x:Key="HeaderPadding">26,0</Thickness>
+    <Thickness x:Key="BodyPadding">26,36</Thickness>
+    <Thickness x:Key="CardPadding">36,30</Thickness>
+    <Thickness x:Key="CameraCardPadding">36</Thickness>
+    <Thickness x:Key="PrimaryButtonPadding">20,12</Thickness>
+    <Thickness x:Key="HeaderButtonPadding">24,12</Thickness>
+    <Thickness x:Key="SmallButtonPadding">14,12</Thickness>
+    <Thickness x:Key="StatusBadgePadding">16,6</Thickness>
+
+    <!-- ========================================================= -->
+    <!-- Text Styles -->
+    <!-- ========================================================= -->
+
+    <Style x:Key="LabelStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource MutedTextBrush}"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="CharacterSpacing" Value="140"/>
+    </Style>
+
+    <Style x:Key="SectionLabelStyle"
+           TargetType="TextBlock"
+           BasedOn="{StaticResource LabelStyle}" />
+
+    <Style x:Key="AppTitleTextStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource WhiteTextBrush}"/>
+        <Setter Property="FontSize" Value="28"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="CharacterSpacing" Value="140"/>
+    </Style>
+
+    <Style x:Key="SectionTitleStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource MutedTextBrush}"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="CharacterSpacing" Value="120"/>
+    </Style>
+
+    <Style x:Key="NumberStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource WhiteTextBrush}"/>
+        <Setter Property="FontSize" Value="46"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Margin" Value="0,8,0,0"/>
+    </Style>
+
+    <Style x:Key="PrimaryNumberStyle"
+           TargetType="TextBlock"
+           BasedOn="{StaticResource NumberStyle}">
+        <Setter Property="Foreground" Value="{StaticResource PrimaryBrush}"/>
+    </Style>
+
+    <Style x:Key="DangerNumberStyle"
+           TargetType="TextBlock"
+           BasedOn="{StaticResource NumberStyle}">
+        <Setter Property="Foreground" Value="{StaticResource DangerBrush}"/>
+    </Style>
+
+    <Style x:Key="CameraNameTextStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource WhiteTextBrush}"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+    </Style>
+
+    <Style x:Key="DetailLabelStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource MutedTextBrush}"/>
+        <Setter Property="FontSize" Value="18"/>
+    </Style>
+
+    <Style x:Key="DetailValueStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource WhiteTextBrush}"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+    </Style>
+
+    <Style x:Key="OnlineStatusTextStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource BlackTextBrush}"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+    </Style>
+
+    <Style x:Key="OfflineStatusTextStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource WhiteTextBrush}"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+    </Style>
+
+    <!-- ========================================================= -->
+    <!-- Card / Border Styles -->
+    <!-- ========================================================= -->
+
+    <Style x:Key="HeaderBorderStyle" TargetType="Grid">
+        <Setter Property="BorderBrush" Value="{StaticResource HeaderBorderBrush}"/>
+        <Setter Property="BorderThickness" Value="0,0,0,1"/>
+        <Setter Property="Padding" Value="{StaticResource HeaderPadding}"/>
+    </Style>
+
+    <Style x:Key="CardStyle" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource CardBackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrushColor}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="12"/>
+        <Setter Property="Padding" Value="{StaticResource CardPadding}"/>
+    </Style>
+
+    <Style x:Key="CameraCardStyle"
+           TargetType="Border"
+           BasedOn="{StaticResource CardStyle}">
+        <Setter Property="Padding" Value="{StaticResource CameraCardPadding}"/>
+    </Style>
+
+    <Style x:Key="OnlineStatusBadgeStyle" TargetType="Border">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+        <Setter Property="CornerRadius" Value="4"/>
+        <Setter Property="Padding" Value="{StaticResource StatusBadgePadding}"/>
+    </Style>
+
+    <Style x:Key="OfflineStatusBadgeStyle" TargetType="Border">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Background" Value="{StaticResource OfflineBadgeBrush}"/>
+        <Setter Property="CornerRadius" Value="4"/>
+        <Setter Property="Padding" Value="{StaticResource StatusBadgePadding}"/>
+    </Style>
+
+    <!-- ========================================================= -->
+    <!-- Status Dot / Ellipse Styles -->
+    <!-- ========================================================= -->
+
+    <Style x:Key="PrimaryStatusDotStyle" TargetType="Ellipse">
+        <Setter Property="Width" Value="12"/>
+        <Setter Property="Height" Value="12"/>
+        <Setter Property="Fill" Value="{StaticResource PrimaryBrush}"/>
+    </Style>
+
+    <Style x:Key="OfflineStatusDotStyle" TargetType="Ellipse">
+        <Setter Property="Width" Value="12"/>
+        <Setter Property="Height" Value="12"/>
+        <Setter Property="Fill" Value="{StaticResource OfflineDotBrush}"/>
+    </Style>
+
+    <!-- ========================================================= -->
+    <!-- Button Styles -->
+    <!-- ========================================================= -->
+
+    <Style x:Key="ControlButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource BlackTextBrush}"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Padding" Value="{StaticResource PrimaryButtonPadding}"/>
+    </Style>
+
+    <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource BlackTextBrush}"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Padding" Value="{StaticResource PrimaryButtonPadding}"/>
+    </Style>
+
+    <Style x:Key="HeaderButtonStyle"
+           TargetType="Button"
+           BasedOn="{StaticResource PrimaryButtonStyle}">
+        <Setter Property="Padding" Value="{StaticResource HeaderButtonPadding}"/>
+    </Style>
+
+    <Style x:Key="DarkButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource DarkButtonBackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource WhiteTextBrush}"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="BorderBrush" Value="{StaticResource DarkButtonBorderBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="{StaticResource SmallButtonPadding}"/>
+    </Style>
+
+    <Style x:Key="DeleteButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource DangerBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource WhiteTextBrush}"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Padding" Value="{StaticResource SmallButtonPadding}"/>
+    </Style>
+
+    <!-- ========================================================= -->
+    <!-- TabView Style -->
+    <!-- ========================================================= -->
+
+    <Style x:Key="DarkTabViewStyle" TargetType="TabView">
+        <Setter Property="Background" Value="{StaticResource AppBackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrushColor}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+    <Style x:Key="DarkTabViewItemStyle"
+       TargetType="TabViewItem">
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="MinWidth" Value="140"/>
+        <Setter Property="MaxWidth" Value="180"/>
+        <Setter Property="MinHeight" Value="44"/>
+        <Setter Property="Padding" Value="14,8"/>
+    </Style>
+
+    <!-- ========================================================= -->
+    <!-- Compact Control Styles -->
+    <!-- Must appear after CardStyle and Button styles because of BasedOn -->
+    <!-- ========================================================= -->
+
+    <Style x:Key="CompactCameraCardStyle"
+           TargetType="Border"
+           BasedOn="{StaticResource CameraCardStyle}">
+        <Setter Property="Padding" Value="22"/>
+    </Style>
+
+    <Style x:Key="CompactPadButtonStyle"
+           TargetType="Button"
+           BasedOn="{StaticResource DarkButtonStyle}">
+        <Setter Property="Width" Value="62"/>
+        <Setter Property="Height" Value="62"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="FontSize" Value="22"/>
+    </Style>
+
+    <Style x:Key="CompactPadPrimaryButtonStyle"
+           TargetType="Button"
+           BasedOn="{StaticResource PrimaryButtonStyle}">
+        <Setter Property="Width" Value="62"/>
+        <Setter Property="Height" Value="62"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="FontSize" Value="22"/>
+    </Style>
+
+    <Style x:Key="CompactPadStopButtonStyle"
+           TargetType="Button"
+           BasedOn="{StaticResource DeleteButtonStyle}">
+        <Setter Property="Width" Value="62"/>
+        <Setter Property="Height" Value="62"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+
+</ResourceDictionary>
