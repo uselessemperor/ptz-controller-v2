@@ -1,0 +1,48 @@
+<Window
+    x:Class="PTZ_Controller_v2.CameraControlHubWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Closed="Window_Closed"
+    Title="Camera Control Hub">
+
+    <Grid RequestedTheme="Dark"
+          Background="{StaticResource AppBackgroundBrush}"
+          Padding="16">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Slim Header -->
+        <Grid Margin="0,0,0,12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Horizontal"
+                        Spacing="10"
+                        VerticalAlignment="Center">
+
+                <Ellipse Style="{StaticResource PrimaryStatusDotStyle}"/>
+
+                <TextBlock Text="CAMERA CONTROL HUB"
+                           Style="{StaticResource SectionTitleStyle}"/>
+            </StackPanel>
+
+            <Button Grid.Column="1"
+                    Content="REFRESH"
+                    Style="{StaticResource DarkButtonStyle}"
+                    Click="Refresh_Click"/>
+        </Grid>
+
+        <TabView x:Name="CameraTabView"
+                 Grid.Row="1"
+                 Style="{StaticResource DarkTabViewStyle}"
+                 IsAddTabButtonVisible="False"
+                 CanDragTabs="False"
+                 TabWidthMode="SizeToContent"
+                 SelectionChanged="CameraTabView_SelectionChanged"/>
+    </Grid>
+</Window>

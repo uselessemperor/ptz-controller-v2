@@ -36,10 +36,12 @@
                            Style="{StaticResource AppTitleTextStyle}"/>
             </StackPanel>
 
-            <Button Grid.Column="1"
-                    Content="+ ADD CAMERA"
-                    Style="{StaticResource HeaderButtonStyle}"
-                    Click="AddCamera_Click"/>
+            <StackPanel Grid.Column="1"  Orientation="Horizontal"   Spacing="12">
+
+                <Button Content="CONTROL HUB"  Style="{StaticResource DarkButtonStyle}"  Click="OpenControlHub_Click"/>
+
+                <Button Content="+ ADD CAMERA"  Style="{StaticResource HeaderButtonStyle}"  Click="AddCamera_Click"/>
+            </StackPanel>
         </Grid>
 
         <!-- Body -->

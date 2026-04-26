@@ -75,5 +75,10 @@ namespace PTZ_Controller_v2
                 Cameras.Remove(cameraCard);
             }
         }
+        private void OpenControlHub_Click(object sender, RoutedEventArgs e)
+        {
+            var hubWindow = new CameraControlHubWindow(_services);
+            hubWindow.Activate();
+        }
     }
 }

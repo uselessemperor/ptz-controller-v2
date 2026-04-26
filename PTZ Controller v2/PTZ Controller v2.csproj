@@ -26,6 +26,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="Windows\CameraControlHubWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
     <Page Update="Windows\CameraControlWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -39,6 +45,12 @@
 
   <ItemGroup>
     <Page Update="AddCamera.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Controls\CameraControlView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
