@@ -26,7 +26,7 @@ jobs:
         run: nuget restore "PTZ Controller v2.slnx"
 
       - name: Build solution
-        run: msbuild "PTZ Controller v2.sln" /p:Configuration=Release /p:Platform="x64"
+        run: msbuild "PTZ Controller v2.slnx" /p:Configuration=Release /p:Platform="x64"
 
       - name: Upload build output
         uses: actions/upload-artifact@v4
