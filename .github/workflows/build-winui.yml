@@ -1,0 +1,36 @@
+name: Build WinUI App
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - feature/multi-camera-control-hub
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v2
+
+      - name: Restore NuGet packages
+        run: nuget restore "PTZ Controller v2.slnx"
+
+      - name: Build solution
+        run: msbuild "PTZ Controller v2.sln" /p:Configuration=Release /p:Platform="x64"
+
+      - name: Upload build output
+        uses: actions/upload-artifact@v4
+        with:
+          name: PTZ-Controller-v2-Release
+          path: |
+            **/bin/x64/Release/**
