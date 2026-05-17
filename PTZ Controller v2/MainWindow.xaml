@@ -61,7 +61,7 @@
                         <StackPanel>
                             <TextBlock Text="TOTAL CAMERAS"
                                        Style="{StaticResource LabelStyle}"/>
-                            <TextBlock Text="3"
+                            <TextBlock Text="7"
                                        Style="{StaticResource NumberStyle}"/>
                         </StackPanel>
                     </Border>

@@ -1,5 +1,6 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using PTZ_Controller_v2.Helpers;
 using PTZ_Controller_v2.Models;
 using PTZ_Controller_v2.Services;
 
@@ -12,6 +13,7 @@ public sealed partial class AddCameraWindow : Window
     public AddCameraWindow(ICameraRepository cameraRepository)
     {
         this.InitializeComponent();
+        WindowTitleBarHelper.ApplyThemeTitleBar(this);
         _cameraRepository = cameraRepository;
     }
 

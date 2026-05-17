@@ -3,6 +3,7 @@ using Microsoft.UI.Xaml.Controls;
 using PTZ_Controller_v2.Services;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using PTZ_Controller_v2.Helpers;
 
 
 // To learn more about WinUI, the WinUI project structure,
@@ -24,7 +25,7 @@ namespace PTZ_Controller_v2
         public MainWindow(ICameraRepository cameraRepository, AppServices services)
         {
             InitializeComponent();
-
+            WindowTitleBarHelper.ApplyThemeTitleBar(this);
             _cameraRepository = cameraRepository;
             _services = services;
             this.Activated += MainWindow_Activated;
