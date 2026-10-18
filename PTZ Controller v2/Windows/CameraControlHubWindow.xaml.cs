@@ -1,6 +1,7 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using PTZ_Controller_v2.Controls;
+using PTZ_Controller_v2.Helpers;
 using PTZ_Controller_v2.Models;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ public sealed partial class CameraControlHubWindow : Window
     public CameraControlHubWindow(AppServices services)
     {
         InitializeComponent();
+        WindowTitleBarHelper.ApplyThemeTitleBar(this);
 
         _services = services;
 
